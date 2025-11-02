@@ -203,7 +203,6 @@ const UserSchema = new Schema<IUser>({
 });
 
 // Indexes for better query performance
-UserSchema.index({ username: 1 });
 UserSchema.index({ 'profile.isVendor': 1, 'reputation.score': -1 });
 UserSchema.index({ 'profile.categories': 1 });
 UserSchema.index({ 'reputation.totalVolume': -1 });
